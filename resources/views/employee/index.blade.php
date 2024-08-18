@@ -16,6 +16,7 @@
             <th>Joining_date</th>
             <th>Gender</th>
             <th>Designation</th>
+            <th>Designation_id</th>
             <th>Peronal Info</th>
         </tr>
         @foreach ($employees as $employee)
@@ -28,6 +29,7 @@
             <td>{{$employee->joining_date}}</td>
             <td>{{$employee->gender}}</td>
             <td>{{$employee->designation}}</td>
+            <td>{{$employee->designation->designation_name}}</td>
             <td><a href="{{url("/employee/$employee->id")}}">Show</a></td>
             
         </tr>
