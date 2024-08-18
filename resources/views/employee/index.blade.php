@@ -29,7 +29,7 @@
             <td>{{$employee->joining_date}}</td>
             <td>{{$employee->gender}}</td>
             <td>{{$employee->designation}}</td>
-            <td>{{$employee->designation->designation_name}}</td>
+            <td>{{$employee->designation->designation_order}}</td>
             <td><a href="{{url("/employee/$employee->id")}}">Show</a></td>
             
         </tr>
