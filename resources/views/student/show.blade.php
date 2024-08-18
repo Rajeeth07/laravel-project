@@ -7,18 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="{{url("stu/")}}">Student</a>
+    <h1>{{$students->firstname}} Deatails</h1>
     <table border="1">
         <tr>
-            <th>Firstname</th>
-            <th>Last name</th>
-            
-            
+            <th>Firstname</th><td>{{$students->firstname}}</td>
+        </tr>
+        <tr>  
+            <th>Last name</th><td>{{$students->lastname}}
         </tr>
         <tr>
-            <td>{{$students->firstname}}</td>
-            <td>{{$students->lastname}}</td>
+            <th>Grade Name</th><td><a href="{{url("/grades/$students->grade_id")}}">{{$students->grade->grade_name}}</a></td>
         </tr>
+            
+        
     </table>
+    <a href="{{url("stu/")}}">All student Datail</a>
 </body>
 </html>

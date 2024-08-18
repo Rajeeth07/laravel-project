@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Grade;
 use App\Models\Students;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,14 @@ Route::get('/stu', function () {
 Route::get('/stu/{id}', function ($id) {
     $students=Students::find($id);
     return view('student.show',compact('students'));
+});
+
+Route::get('/grades', function () {
+    $grades=Grade::all();
+    return view('grade.index',compact('grades'));
+});
+Route::get('/grades/{id}', function ($id) {
+    $grades=Grade::find($id);
+    $students=Grade::find($id)->students;
+    return view('grade.show',compact('students','grades'));
 });
