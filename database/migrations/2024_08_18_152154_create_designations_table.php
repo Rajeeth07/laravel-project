@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('designations', function (Blueprint $table) {
             $table->id();
-            $table->string('designation_name', length: 50);
+            $table->string('designation_name',length:50);
             $table->decimal('designation_order');
-            $table->string('designation_color', length: 30);
+            $table->string('designation_color',length:30);
             $table->timestamps();
         });
     }

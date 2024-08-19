@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>All Designations details</h2>
     <table border="1">
         <tr>
             <th>Designation Name</th>
@@ -21,5 +22,6 @@
             </tr>
         @endforeach
     </table>
+    <h4><a href="/employee">All Employees Details</a></h4>
 </body>
 </html>

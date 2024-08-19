@@ -25,7 +25,7 @@ Route::get('/designation', function () {
 });
 Route::get('/designation/{id}', function ($id) {
     $designation=Designation::find($id);
-    $employees=Designation::find($id)->employees;
-    return view('employee.show',compact('designation','employees'));
+    $employees=Designation::find($id)->empolyees;
+    return view('designation.show',compact('designation','employees'));
 });
 

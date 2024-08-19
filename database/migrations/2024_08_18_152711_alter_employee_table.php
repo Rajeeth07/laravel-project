@@ -10,10 +10,9 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::table('employees', function (Blueprint $table) {
-            $table->integer('disigantion_id')->after('designation');
-        });
+    {   Schema::table('employees', function (Blueprint $table) {
+        $table->integer('designation_id')->after('designation');
+    });
     }
 
     /**

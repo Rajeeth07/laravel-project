@@ -7,34 +7,37 @@
     <title>Document</title>
 </head>
 <body>
+   <h2>All Employees Details</h2>
     <table border="1">
         <tr>
+            <th>Id</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>BOB</th>
             <th>Nic</th>
             <th>Joining_date</th>
             <th>Gender</th>
-            <th>Designation</th>
-            <th>Designation_id</th>
-            <th>Peronal Info</th>
+            <th>Designation Name</th>
+
         </tr>
         @foreach ($employees as $employee)
         <tr>
-            
-            <td>{{$employee->first_name}}</td>
+            <td>{{$employee->id}}</td>
+            <td><a href="{{url("/employee/$employee->id")}}">{{$employee->first_name}}</a></td>
             <td>{{$employee->last_name}}</td>
             <td>{{$employee->date_of_birth}}</td>
             <td>{{$employee->nic}}</td>
             <td>{{$employee->joining_date}}</td>
             <td>{{$employee->gender}}</td>
-            <td>{{$employee->designation}}</td>
-            <td>{{$employee->designation->designation_order}}</td>
-            <td><a href="{{url("/employee/$employee->id")}}">Show</a></td>
+            <td><a href="{{url("/designation/$employee->designation_id")}}">{{$employee->designation->designation_name}}</a></td>
+
+
+            
             
         </tr>
             
         @endforeach
     </table>
+    <h4><a href="{{url("/designation")}}">All designation details</a></h4>
 </body>
 </html>

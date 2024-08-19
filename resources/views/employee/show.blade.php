@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>{{$employee->first_name}} details</h1>
     <table border="1">
         <tr>
             <td>First Name</td>
@@ -34,8 +35,10 @@
         </tr>
         <tr>
             <td>Designation</td>
-            <td>{{$employee->designation}}</td>
+            <td><a href="{{url("/designation/$employee->grade_id")}}">{{$employee->designation->designation_name}}</a></td>
         </tr>
     </table>
+    <a href="/employee">All Employees Details</a>
+    <a href="{{url("/designation")}}">All designation details</a>
 </body>
 </html>

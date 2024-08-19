@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Employee;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Employee;
+
 class Designation extends Model
 {
     use HasFactory;
-    public function employees()
+    public function empolyees()
     {
         return $this->hasMany(Employee::class);
     }
