@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{$grades->grade_name}} students deatails</h1>
+    <h1>{{$grade->grade_name}} students details</h1>
     <table border="1">
         <tr>
             <th>
@@ -25,6 +25,22 @@
                 </td>
                 <td>{{$student->lastname}}</td>
                 <td>{{$student->grade->grade_name}}</td>
+            </tr>
+        @endforeach
+    </table>
+    <table border="1">
+        <tr>
+            <th>Subject Name</th>
+            <th>Subject Order</th>
+            <th>Subject Color</th>
+        </tr>
+        <hr>
+        <h1>{{$grade->grade_name}} Subject details</h1>
+        @foreach ($grade->subjects as $subject)
+            <tr>
+                <td><a href="{{url("/subjects/$subject->id")}}">{{$subject->subject_name}}</a></td>
+                <td>{{$subject->subject_order}}</td>
+                <td>{{$subject->subject_color}}</td>
             </tr>
         @endforeach
     </table>

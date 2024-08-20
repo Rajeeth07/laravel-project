@@ -29,6 +29,7 @@
     <br>
     @endforeach
     </table>
+    
     <a href="{{url("/grades")}}" style="color: blue">All grades detail</a>
 </body>
 </html>

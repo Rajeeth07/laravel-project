@@ -1,20 +1,21 @@
 <?php
 
 use App\Models\Grade;
-use App\Models\Students;
+use App\Models\Student;
 use Illuminate\Support\Facades\Route;
+use App\Models\Subject;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/stu', function () {
-    $students=Students::all();
+    $students=Student::all();
     return view('student.index',compact('students'));
 });
 Route::get('/stu/{id}', function ($id) {
-    $students=Students::find($id);
-    return view('student.show',compact('students'));
+    $student=Student::find($id);
+    return view('student.show',compact('student'));
 });
 
 Route::get('/grades', function () {
@@ -22,7 +23,15 @@ Route::get('/grades', function () {
     return view('grade.index',compact('grades'));
 });
 Route::get('/grades/{id}', function ($id) {
-    $grades=Grade::find($id);
+    $grade=Grade::find($id);
     $students=Grade::find($id)->students;
-    return view('grade.show',compact('students','grades'));
+    return view('grade.show',compact('students','grade'));
+});
+Route::get('/subjects/{id}', function ($id) {
+    $subject=Subject::find($id);
+    return view('subject.show',compact('subject'));
+});
+Route::get('/subjects', function () {
+    $subjects=Subject::all();
+    return view('subject.index',compact('subjects'));
 });

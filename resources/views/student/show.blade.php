@@ -7,20 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{$students->firstname}} Deatails</h1>
+    <h1>{{$student->firstname}} Details</h1>
     <table border="1">
         <tr>
-            <th>Firstname</th><td>{{$students->firstname}}</td>
+            <th>Firstname</th><td>{{$student->firstname}}</td>
         </tr>
         <tr>  
-            <th>Last name</th><td>{{$students->lastname}}
+            <th>Last name</th><td>{{$student->lastname}}
         </tr>
         <tr>
-            <th>Grade Name</th><td><a href="{{url("/grades/$students->grade_id")}}">{{$students->grade->grade_name}}</a></td>
-        </tr>
-            
-        
+            <th>Grade Name</th><td><a href="{{url("/grades/$student->grade_id")}}">{{$student->grade->grade_name}}</a></td>
+        </tr>       
     </table>
-    <a href="{{url("stu/")}}" style="color: blue">All student Datail</a>
+    <table border="1">
+        <tr>
+            <th>Subject Name</th>
+            <th>Subject Order</th>
+            <th>Subject Color</th>
+        </tr>
+        <hr>
+        <h1>{{$student->firstname}} Subjects details</h1>
+        @foreach ($student->subjects as $subject)
+            <tr>
+                <td><a href="{{url("/subjects/$subject->id")}}">{{$subject->subject_name}}</a></td>
+                <td>{{$subject->subject_order}}</td>
+                <td>{{$subject->subject_color}}</td>
+            </tr>
+        @endforeach
+    </table>
+    <a href="{{url("stu/")}}" style="color: blue">All student Detail</a>
 </body>
 </html>
