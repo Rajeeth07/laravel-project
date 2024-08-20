@@ -18,6 +18,8 @@
             <th>Joining_date</th>
             <th>Gender</th>
             <th>Designation Name</th>
+            <th>Designation Order</th>
+            <th>Designation Color</th>
 
         </tr>
         @foreach ($employees as $employee)
@@ -30,7 +32,8 @@
             <td>{{$employee->joining_date}}</td>
             <td>{{$employee->gender}}</td>
             <td><a href="{{url("/designation/$employee->designation_id")}}">{{$employee->designation->designation_name}}</a></td>
-
+            <td>{{$employee->designation->designation_order}}</td>
+            <td>{{$employee->designation->designation_color}}</td>
 
             
             
@@ -38,6 +41,7 @@
             
         @endforeach
     </table>
-    <h4><a href="{{url("/designation")}}">All designation details</a></h4>
+    <h4><a href="{{url("/designation")}}" style="color:blue;">All designation details</a></h4>
+    
 </body>
 </html>

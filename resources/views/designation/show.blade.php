@@ -31,7 +31,7 @@
             </tr>
         @endforeach
     </table>
-    <a href="/employee">All Employees Details</a>
-    <a href="{{url("/designation")}}">All designation details</a>
+    <a href="/employee" style="color:blue;">All Employees Details</a>
+    <a href="{{url("/designation")}}" style="color:black;">All designation details</a>
 </body>
 </html>

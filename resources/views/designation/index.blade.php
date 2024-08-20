@@ -22,6 +22,6 @@
             </tr>
         @endforeach
     </table>
-    <h4><a href="/employee">All Employees Details</a></h4>
+    <h4><a href="/employee" style="color:blue;">All Employees Details</a></h4>
 </body>
 </html>

@@ -35,10 +35,10 @@
         </tr>
         <tr>
             <td>Designation</td>
-            <td><a href="{{url("/designation/$employee->grade_id")}}">{{$employee->designation->designation_name}}</a></td>
+            <td><a href="{{url("/designation/$employee->designation_id")}}">{{$employee->designation->designation_name}}</a></td>
         </tr>
     </table>
-    <a href="/employee">All Employees Details</a>
-    <a href="{{url("/designation")}}">All designation details</a>
+    <a href="/employee" style="color:blue;">All Employees Details</a>
+    <a href="{{url("/designation")}}" style="color:black;">All designation details</a>
 </body>
 </html>
