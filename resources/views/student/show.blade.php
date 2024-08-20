@@ -21,6 +21,6 @@
             
         
     </table>
-    <a href="{{url("stu/")}}">All student Datail</a>
+    <a href="{{url("stu/")}}" style="color: blue">All student Datail</a>
 </body>
 </html>

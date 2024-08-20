@@ -16,18 +16,20 @@
             <th>
                 Last Name
             </th>
+            <th>Grade Name</th>
         </tr>
         @foreach ($students as $student)
             <tr>
                 <td>
-                    {{$student->firstname}}
+                    <a href="{{url("/stu/$student->id")}}">{{$student->firstname}}</a>
                 </td>
                 <td>{{$student->lastname}}</td>
+                <td>{{$student->grade->grade_name}}</td>
             </tr>
         @endforeach
     </table>
-    <a href="{{url("stu/")}}">All student Datail</a>
-    <a href="{{url("/grades")}}">All grades detail</a>
+    <a href="{{url("stu/")}}" style="color: blue">All student Datail</a>
+    <a href="{{url("/grades")}}" style="color: red">All grades detail</a>
 </body>
 </html>
 
