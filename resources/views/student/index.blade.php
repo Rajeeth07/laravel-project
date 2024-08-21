@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>All Student deatails</h1>
+    <h1>All Student details</h1>
     <table border="1">
     <tr>
         <th>Id</th>
@@ -25,11 +25,16 @@
         <td><a href="{{url("/grades/$student->grade_id")}}">{{$student->grade->grade_name}}</a></td>
         <td>{{$student->grade->grade_group}}</td>
         <td>{{$student->grade->grade_order}}</td>
+        <td>
+            @foreach ($student->subjects as $subject)
+                {{$subject->subject_name}},
+            @endforeach
+        </td>
     </tr>
-    <br>
     @endforeach
     </table>
     
     <a href="{{url("/grades")}}" style="color: blue">All grades detail</a>
+    <a href="{{url("/subjects")}}" style="color: red">All subjects detail</a>
 </body>
 </html>

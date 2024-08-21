@@ -29,11 +29,14 @@
         </tr>
         @foreach ($subject->students as $student)
             <tr>
-                <td>{{$student->firstname}}</td>
+                <td><a href="{{url("/stu/$student->id")}}">{{$student->firstname}}</a></td>
                 <td>{{$student->lastname}}</td>
-                <td>{{$student->grade->grade_name}}</td>
+                <td><a href="{{url("/grades/$student->grade_id")}}">{{$student->grade->grade_name}}</a></td>
             </tr>
         @endforeach
     </table>
+    <a href="{{url("stu/")}}" style="color: blue">All student Datail</a>
+    <a href="{{url("/grades")}}" style="color: red">All grades detail</a>
+    <a href="{{url("/subjects")}}" style="color: black">All subjects detail</a>
 </body>
 </html>

@@ -36,5 +36,7 @@
         @endforeach
     </table>
     <a href="{{url("stu/")}}" style="color: blue">All student Detail</a>
+    <a href="{{url("/grades")}}" style="color: red">All grades detail</a>
+    <a href="{{url("/subjects")}}" style="color: red">All subjects detail</a>
 </body>
 </html>
