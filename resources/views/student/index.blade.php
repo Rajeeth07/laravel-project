@@ -14,8 +14,7 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Grade Name</th>
-        <th>Grade Group</th>
-        <th>Grade Order</th>
+        <th>Subjects</th>
     </tr>
     @foreach($students as $student)
     <tr>
@@ -23,11 +22,9 @@
         <td><a href="{{url("/stu/$student->id")}}">{{$student->firstname}}</a></td>
         <td>{{$student->lastname}}</td>
         <td><a href="{{url("/grades/$student->grade_id")}}">{{$student->grade->grade_name}}</a></td>
-        <td>{{$student->grade->grade_group}}</td>
-        <td>{{$student->grade->grade_order}}</td>
         <td>
             @foreach ($student->subjects as $subject)
-                {{$subject->subject_name}},
+                <a href="{{url("/subjects/$subject->id")}}">{{$subject->subject_name}},</a>
             @endforeach
         </td>
     </tr>

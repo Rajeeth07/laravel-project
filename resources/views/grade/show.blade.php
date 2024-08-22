@@ -7,6 +7,25 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>{{$grade->grade_name}} grade details</h1>
+    <table border="1">
+        <tr>
+            <th>Grade Id</th>
+            <td>{{$grade->id}}</td>
+        </tr>
+        <tr>
+            <th>Grade Name</th>
+            <td>{{$grade->grade_name}}</td>
+        </tr>
+        <tr>
+            <th>Grade Color</th>
+            <td>{{$grade->grade_color}}</td>
+        </tr>
+        <tr>
+            <th>Grade Order</th>
+            <td>{{$grade->grade_order}}</td>
+        </tr>
+    </table>
     <h1>{{$grade->grade_name}} students details</h1>
     <table border="1">
         <tr>
