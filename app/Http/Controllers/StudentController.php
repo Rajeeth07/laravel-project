@@ -9,10 +9,10 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($p)
     {
-        $students=Student::all();
-    return view('student.index',compact('students'));
+        $students=Student::paginate(15);
+    return view('pages.'.$p,compact('students'));
     }
 
     /**
@@ -37,6 +37,7 @@ class StudentController extends Controller
     public function show(string $id)
     {
         $student=Student::find($id);
+       
     return view('student.show',compact('student'));
     }
 

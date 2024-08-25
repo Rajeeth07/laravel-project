@@ -11,6 +11,8 @@ use App\Models\Subject;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/{page?}',function ($page){
+
+Route::get('/{p}', [StudentController::class, 'index']);
+Route::get('/{page}', function ($page) {
     return view('pages.'.$page);
 });
