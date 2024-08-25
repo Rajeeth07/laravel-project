@@ -47,7 +47,7 @@ Route::get('/subjects', function () {
 //Route::resource('subjects', SubjectController::class);
 //Route::resource('grades', GradeController::class);
 Route::resources([
-    '/stu'=>StudentController::class,
+    '/students'=>StudentController::class,
     '/subjects'=>SubjectController::class,
     'grades'=>GradeController::class
 ]);

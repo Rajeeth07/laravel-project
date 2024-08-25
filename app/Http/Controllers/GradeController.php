@@ -12,8 +12,8 @@ class GradeController extends Controller
     public function index(Request $request)
     {   
         //$input=$request->all();
-        $name=$request->query('myname');
-        dd($name);
+        //$name=$request->query('myname');
+        //dd($name);
         $grades=Grade::paginate(15);
         return view('grade.index',compact('grades'));
     }

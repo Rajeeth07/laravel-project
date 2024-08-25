@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+<x-layout>
     <h1>All Subject details</h1>
     <table border="1">
         <tr>
@@ -22,7 +14,7 @@
             </tr>
         @endforeach
     </table>
-    <a href="{{url("stu/")}}" style="color: blue">All student Datail</a>
+    {{$subjects->links()}}
+    <a href="{{url("students/")}}" style="color: blue">All student Datail</a>
     <a href="{{url("/grades")}}" style="color: red">All grades detail</a>
-</body>
-</html>
+</x-layout>
