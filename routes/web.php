@@ -13,6 +13,6 @@ Route::get('/', function () {
 });
 
 Route::get('/{p}', [StudentController::class, 'index']);
-Route::get('/{page}', function ($page) {
-    return view('pages.'.$page);
-});
+// Route::get('/{page}', function ($page) {
+//     return view('pages.'.$page);
+// });

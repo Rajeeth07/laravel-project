@@ -12,7 +12,7 @@ class StudentController extends Controller
     public function index($p)
     {
         $students=Student::paginate(15);
-    return view('pages.'.$p,compact('students'));
+        return view('pages.'.$p,compact('students'));
     }
 
     /**
