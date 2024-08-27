@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Grade;
 use App\Models\Student;
+use App\Models\Subject;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -12,7 +15,11 @@ class StudentController extends Controller
     public function index($p)
     {
         $students=Student::paginate(15);
-        return view('pages.'.$p,compact('students'));
+
+        $studentsCount=Student::get()->count();
+        $subjectsCount=Subject::get()->count();
+        $gradesCount=Grade::get()->count();
+        return view('pages.'.$p,compact('students','studentsCount','subjectsCount','gradesCount'));
     }
 
     /**

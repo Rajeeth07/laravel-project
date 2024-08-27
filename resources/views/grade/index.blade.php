@@ -14,11 +14,17 @@
                         <li class="breadcrumb-item"><a href="/index">Dashboard</a></li>
                         <li class="breadcrumb-item active">Grades</li>
                     </ol>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            All Grades Details
+                        </div>
+                        <div class="card-body">
                         <table id="datatablesSimple">
                             <thead>
                                 <th>Grade Name</th>
                                 <th>Grade Group</th>
                                 <th>Grade Order</th>
+                                <th>Grade Color</th>
                                 <th>Show</th>
                             </thead>
                             @foreach ($grades as $grade)
@@ -26,10 +32,13 @@
                                 <td>{{$grade->grade_name}}</td>
                                 <td>{{$grade->grade_group}}</td>
                                 <td>{{$grade->grade_order}}</td>
-                                <td><a href="{{url("/grades/$grade->id")}}">show</a></td>
+                                <td>{{$grade->grade_color}}</td>
+                                <td><a href="{{url("dashboard/grades/$grade->id")}}">show</a></td>
                             </tr>
                              @endforeach
                         </table>
+                        </div>
+                    </div>
                 </div>
                 <x-footer/>
                 

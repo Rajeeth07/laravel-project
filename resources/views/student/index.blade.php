@@ -14,6 +14,11 @@
                         <li class="breadcrumb-item"><a href="/index">Dashboard</a></li>
                         <li class="breadcrumb-item active">Students</li>
                     </ol>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            All Students Details
+                        </div>
+                        <div class="card-body">
                         <table id="datatablesSimple">
                             <thead>
                                 <th>First Name</th>
@@ -26,10 +31,12 @@
                                 <td>{{$student->first_name}}</td>
                                 <td>{{$student->last_name}}</td>
                                 <td>{{$student->grade->grade_name}}</td>
-                                <td><a href="{{url("/students/$student->id")}}">show</a></td>
+                                <td><a href="{{url("dashboard/students/$student->id")}}">show</a></td>
                             </tr>
                              @endforeach
                         </table>
+                        </div>
+                    </div>
                 </div>
                 <x-footer/>
                 

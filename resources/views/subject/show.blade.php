@@ -12,7 +12,7 @@
                     <h1 class="mt-4">{{$subject->subject_name}}</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="/index">Dashboard</a></li>
-                        <li class="breadcrumb-item active"><a href="/subjects">Subjects</a></li>
+                        <li class="breadcrumb-item active"><a href="/dashboard/subjects">Subjects</a></li>
                         <li class="breadcrumb-item active">{{$subject->subject_name}}</li>
                     </ol>
 <div class="row">
@@ -35,7 +35,7 @@
                         <td>{{$student->first_name}}</td>
                         <td>{{$student->last_name}}</td>
                         <td>{{$student->grade->grade_name}}</td>
-                        <td><a href="{{url("/students/$student->id")}}">show</a></td>
+                        <td><a href="{{url("/dashboard/students/$student->id")}}">show</a></td>
                     </tr>
                      @endforeach
                 </table>
@@ -49,7 +49,7 @@
                 Grades Details
             </div>
             <div class="card-body">
-                <table id="datatablesSimple">
+                <table id="datatablesSimple" border="1">
                     <thead>
                         <th>Grade Name</th>
                         <th>Grade Group</th>
@@ -61,7 +61,7 @@
                         <td>{{$grade->grade_name}}</td>
                         <td>{{$grade->grade_group}}</td>
                         <td>{{$grade->grade_order}}</td>
-                        <td><a href="{{url("/grades/$grade->id")}}">show</a></td>
+                        <td><a href="{{url("/dashboard/grades/$grade->id")}}">show</a></td>
                     </tr>
                      @endforeach
                 </table>
