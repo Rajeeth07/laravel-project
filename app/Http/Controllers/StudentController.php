@@ -12,14 +12,11 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index($p)
+    public function index()
     {
-        $students=Student::paginate(15);
-
-        $studentsCount=Student::get()->count();
-        $subjectsCount=Subject::get()->count();
-        $gradesCount=Grade::get()->count();
-        return view('pages.'.$p,compact('students','studentsCount','subjectsCount','gradesCount'));
+        $students=Student::all();
+        return view('student.index',compact('students'));
+        
     }
 
     /**

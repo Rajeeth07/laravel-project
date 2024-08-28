@@ -11,7 +11,7 @@
                 <div class="container-fluid px-4">
                     <h1 class="mt-4">{{$subject->subject_name}}</h1>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item"><a href="/index">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                         <li class="breadcrumb-item active"><a href="/dashboard/subjects">Subjects</a></li>
                         <li class="breadcrumb-item active">{{$subject->subject_name}}</li>
                     </ol>
@@ -23,7 +23,7 @@
                 Students Detail
             </div>
             <div class="card-body">
-                <table >
+                <table class="table  table-hover">
                     <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
@@ -49,7 +49,7 @@
                 Grades Details
             </div>
             <div class="card-body">
-                <table id="datatablesSimple" border="1">
+                <table id="datatablesSimple" border="1" class="table  table-hover">
                     <thead>
                         <th>Grade Name</th>
                         <th>Grade Group</th>

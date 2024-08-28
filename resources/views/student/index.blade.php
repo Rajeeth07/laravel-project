@@ -11,7 +11,7 @@
                 <div class="container-fluid px-4">
                     <h1 class="mt-4">Students</h1>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item"><a href="/index">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                         <li class="breadcrumb-item active">Students</li>
                     </ol>
                     <div class="card mb-4">
@@ -19,7 +19,7 @@
                             All Students Details
                         </div>
                         <div class="card-body">
-                        <table id="datatablesSimple">
+                        <table id="datatablesSimple" class="table  table-hover">
                             <thead>
                                 <th>First Name</th>
                                 <th>Last Name</th>

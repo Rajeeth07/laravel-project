@@ -72,40 +72,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                DataTable Example
-                            </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Grade Name</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Grade Name</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        @foreach ($students as $student)
-                                            <tr>
-                                                <td>{{$student->first_name}}</td>
-                                                <td>{{$student->last_name}}</td>
-                                                <td>{{$student->grade->grade_name}}</td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                                {{$students->links()}}
-                            </div>
-                        </div>
+
                     </div>
                 </main>
                 <x-footer/>
