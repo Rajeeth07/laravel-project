@@ -1,13 +1,5 @@
 <x-layout>
-    <body class="sb-nav-fixed">
-        <x-nav/>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <x-sidebar/>
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
+    
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Dashboard</h1>
@@ -75,9 +67,6 @@
 
                     </div>
                 </main>
-                <x-footer/>
                 
-            </div>
-        </div>
        
 </x-layout>
